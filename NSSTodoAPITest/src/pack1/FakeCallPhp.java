@@ -28,10 +28,13 @@ public class FakeCallPhp {
 				 .body("")
 				 .when()
 				 .contentType(ContentType.JSON);getClass();
-				 Response resp =rs.request(Method.GET,"/Catagory");
+				 Response resp =rs.request(Method.GET);
 		 JsonPath jp=resp.jsonPath();
-				 
-		 //Test service status of the API endpoint (only one in this case)
+		List<Data>allData=jp.getList("status",Data.class);	
+		for(Data data:allData) {
+			System.out.println("Status are: "+data.category);
+		}
+		//Test service status of the API endpoint (only one in this case)
 			int gtStatus = resp.getStatusCode();
 			System.out.println("Test service status of the API endpoint: "+gtStatus);
 	

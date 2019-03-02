@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="pack1.AggregateAndPrintTaskName">
+      <class name="pack1.FakeCallPhp">
         <methods>
           <include name="GetRequestTest"/>
           <include name="BasURISetup"/>
         </methods>
-      </class> <!-- pack1.AggregateAndPrintTaskName -->
+      </class> <!-- pack1.FakeCallPhp -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
